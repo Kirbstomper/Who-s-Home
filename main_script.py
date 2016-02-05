@@ -21,7 +21,7 @@ def checkIfHome(ip):
 def updateClient(clientID, cur):
 
     home = checkIfHome(cur.execute(
-        '''SELECT ip FROM client WHERE id = ?''', (clientID,)).fetchone()[0])
+        '''SELECT ip FROM clients WHERE id = ?''', (clientID,)).fetchone()[0])
     time = cur.execute(
         '''SELECT time FROM client WHERE id = ?''', (clientID,)).fetchone()[0]
 

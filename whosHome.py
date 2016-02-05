@@ -31,7 +31,7 @@ def index():
     cur = con.cursor()
 
     clientOnline = len(cur.execute(
-        'SELECT * FROM client WHERE online = "Yes"').fetchall())
+        'SELECT * FROM devices WHERE online = "Yes"').fetchall())
     allClient = cur.execute('SELECT * FROM client').fetchall()
 
     try:
